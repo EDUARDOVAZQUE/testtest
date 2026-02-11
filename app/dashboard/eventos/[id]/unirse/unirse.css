@@ -1,0 +1,205 @@
+/**
+ * Join Team Page Styles
+ */
+
+.unirse-container {
+    max-width: 400px;
+    margin: 3rem auto;
+    text-align: center;
+}
+
+.unirse-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.5rem;
+    background: rgba(227, 38, 54, 0.15);
+    border: 2px solid rgba(227, 38, 54, 0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #E32636;
+}
+
+.unirse-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 0.5rem 0;
+}
+
+.unirse-subtitle {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0 0 2rem 0;
+}
+
+.unirse-form {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.input-label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0.5rem;
+}
+
+.input-group {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.code-input {
+    flex: 1;
+    padding: 0.85rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    color: #fff;
+    font-family: 'Monaco', 'Consolas', monospace;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+
+.code-input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+    letter-spacing: 1px;
+}
+
+.code-input:focus {
+    outline: none;
+    border-color: #E32636;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.btn-buscar-unirse {
+    padding: 0 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 0.5rem;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-buscar-unirse:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-buscar-unirse:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Found Team Card */
+.found-team-card {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(227, 38, 54, 0.3);
+    border-radius: 1rem;
+    text-align: left;
+    backdrop-filter: blur(10px);
+}
+
+.found-team-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.found-team-icon-box {
+    width: 56px;
+    height: 56px;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+}
+
+.found-team-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.found-team-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.found-event-name {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.join-warning-box {
+    padding: 1rem;
+    background: rgba(255, 255, 240, 0.05);
+    border: 1px solid rgba(255, 255, 0, 0.1);
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.join-warning-box p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.4;
+}
+
+.btn-confirmar-unirse {
+    width: 100%;
+    padding: 1rem;
+    background: #E32636;
+    border: none;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-confirmar-unirse:hover:not(:disabled) {
+    background: #c91f2d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(227, 38, 54, 0.4);
+}
+
+/* Error Box */
+.unirse-error-box {
+    display: flex;
+    align-items: center;
+    padding: 0.85rem 1rem;
+    background: rgba(227, 38, 54, 0.1);
+    border: 1px solid rgba(227, 38, 54, 0.3);
+    border-radius: 0.5rem;
+    color: #E32636;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.unirse-alt {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.link-crear {
+    color: #E32636;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.link-crear:hover {
+    text-decoration: underline;
+}

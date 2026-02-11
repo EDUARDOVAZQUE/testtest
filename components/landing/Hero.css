@@ -1,0 +1,277 @@
+/**
+ * Hero CSS - Exact Replica
+ */
+
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding-bottom: 2rem;
+    padding-top: 3rem;
+    /* Extra space to prevent next section peeking */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* Exact dark navy from vroomgame analysis */
+    background-color: #101020;
+    /* Blue vignette glow - REMOVED for solid background */
+}
+
+/* Center Layout */
+.hero-center {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* Car Logo Image */
+.hero-car-img {
+    width: 72vw;
+    max-width: 830px;
+    min-width: 400px;
+    padding-top: 2rem;
+    height: auto;
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.6));
+    z-index: 15;
+    transition: transform 0.4s ease-out;
+}
+
+.hero-car-img:hover {
+    transform: scale(1.05);
+    /* Slight grow on hover */
+}
+
+
+
+/* Partners Section (Below Main Logo) */
+.hero-partners {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.hero-partners-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.partner-logo-hero {
+    height: 64px;
+    width: auto;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+    transition: transform 0.3s ease;
+}
+
+.partner-logo-hero:hover {
+    transform: scale(1.1);
+}
+
+.partner-logo-itsoeh {
+    height: 48px;
+}
+
+.hero-career-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+    letter-spacing: 0.05em;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Bottom Left Badge */
+.hero-badge-left {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 20;
+}
+
+.badge-circle {
+    width: 64px;
+    height: 64px;
+    position: relative;
+    background: #F5F5F0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: spin 10s linear infinite;
+}
+
+.badge-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.badge-text text {
+    font-size: 11px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    fill: #000;
+}
+
+.badge-center {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+}
+
+/* Bottom Right Hand */
+.hero-hand-right {
+    position: absolute;
+    bottom: 3.5rem;
+    right: 3.5rem;
+    z-index: 20;
+    animation: bounce 1.5s ease-in-out infinite;
+}
+
+.hand-icon-img {
+    width: 54px;
+    height: auto;
+    filter: drop-shadow(2px 2px 0 #000);
+    margin-right: 18px;
+}
+
+/* Keyframes */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 100svh;
+        /* Use svh for mobile viewport */
+        padding-top: 5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .hero-car-img {
+        width: 90vw;
+        min-width: 280px;
+        max-width: 400px;
+        padding-top: 1rem;
+    }
+
+    .hero-partners {
+        margin-top: 1.5rem;
+        gap: 0.75rem;
+        padding: 0 1rem;
+    }
+
+    .hero-partners-logos {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .partner-logo-hero {
+        height: 40px;
+    }
+
+    .partner-logo-itsoeh {
+        height: 32px;
+    }
+
+    .hero-career-text {
+        font-size: 0.85rem;
+        line-height: 1.4;
+        padding: 0 1rem;
+    }
+
+    .hero-badge-left {
+        display: none;
+    }
+
+    .hero-hand-right {
+        bottom: 1.5rem;
+        right: 1.5rem;
+    }
+
+    .hand-icon-img {
+        width: 40px;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding-top: 4rem;
+    }
+
+    .hero-car-img {
+        width: 95vw;
+        min-width: 250px;
+    }
+
+    .hero-partners-logos {
+        gap: 0.75rem;
+    }
+
+    .partner-logo-hero {
+        height: 32px;
+    }
+
+    .partner-logo-itsoeh {
+        height: 26px;
+    }
+
+    .hero-career-text {
+        font-size: 0.75rem;
+    }
+
+    .hero-hand-right {
+        bottom: 1rem;
+        right: 1rem;
+    }
+
+    .hand-icon-img {
+        width: 32px;
+    }
+}
