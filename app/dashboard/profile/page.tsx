@@ -786,6 +786,17 @@ export default function ProfilePage() {
                         </div>
 
                         <div className="form-group">
+                            <label className="form-label">Nombre completo</label>
+                            <input
+                                type="text"
+                                className="form-input"
+                                value={editForm.displayName}
+                                onChange={(e) => setEditForm({ ...editForm, displayName: e.target.value })}
+                                placeholder="Ingresa tu nombre completo"
+                            />
+                        </div>
+
+                        <div className="form-group">
                             <label className="form-label">Gamertag (8 caracteres alfanuméricos)</label>
                             <div style={{ position: 'relative' }}>
                                 <input
